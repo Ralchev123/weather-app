@@ -1,0 +1,35 @@
+.weather-city {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.weather-info {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    border: solid;
+    position: relative;
+}
+
+.min-max {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: right;
+}
+
+.current-temp {
+    display: flex;
+    flex-direction: column;
+}
+
+.weather-image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -50px;
+}
