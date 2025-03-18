@@ -16,5 +16,24 @@ export const getWeather = async () => {
     }
   };
 
+
+  export const getCordinates = async (nameCity) => {
+      try{
+        const answer = await fetch (`https://geocode.maps.co/search?q=${nameCity}&api_key=67d9e06e1845a338894145yfx0c6220`)
+
+        if (!answer.ok) {
+          throw new Error(`HTTP error! Status: ${answer.status}`);
+        }
+
+        const information = await answer.json();
+        return information;
+
+      } catch (err) {
+        console.log("API RESPONSE:", )
+      }
+
+  }
+  
+
   
   

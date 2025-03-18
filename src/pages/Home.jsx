@@ -23,9 +23,29 @@ function Home () {
         
       }, []);
 
+      const [searchQuery, setSearchQuery] = useState("");
 
-      return weather ? <WeatherLook data={weather} />
-       : <p>Loading...</p>;
+      const GetValueOfButton = (e) => {
+        e.preventDefault();
+        const citySearch = undefined
+        setSearchQuery(citySearch);
+        console.log("Searched city:", citySearch);
+
+      }
+
+
+      return  (
+      <>
+      <form onSubmit={GetValueOfButton}> 
+       <input name = "cityFinder" placeholder="Type City..."/> 
+       <button type = "submit" className="submit-city">FIND</button>
+      </form>
+       <WeatherLook data={weather}/>
+      
+      </>
+      )
+      
+
 }
 
 
