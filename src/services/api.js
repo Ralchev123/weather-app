@@ -1,7 +1,7 @@
-export const getWeather = async () => {
+export const getWeather = async (latitude, longtitude) => {
     try {
       const response = await fetch(
-        "https://api.openweathermap.org/data/2.5/weather?lat=42.7&lon=23.31&units=metric&appid=3f825570233cc12388f60dbe2dbc48a7"
+        `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longtitude}&units=metric&appid=3f825570233cc12388f60dbe2dbc48a7`
       );
   
       if (!response.ok) {

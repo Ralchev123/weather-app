@@ -1,9 +1,9 @@
 import cloudsImg from "../assets/clouds.png";
-import sunImg from "../assets/sunshine.png"
+import sunImg from "../assets/sun.png"
 import "../css/WeatherPerCity.css"
 
 
-function WeatherLook({ data }) {
+function WeatherLook({ data , cityName}) {
     if (!data) return <p>Loading weather...</p>;
     var imsource = undefined;
 
@@ -11,7 +11,7 @@ function WeatherLook({ data }) {
         imsource = cloudsImg
     }
 
-    if(data.weather[0].main.startsWith("Sun")){
+    if(data.weather[0].main.startsWith("Cle")){
       imsource = sunImg
   }
     
@@ -22,7 +22,7 @@ function WeatherLook({ data }) {
           <div className="weather-info">
 
           <div className="current-temp">
-                <h1>SOFIA</h1>
+                <h1>{cityName}</h1>
                 <h4>CURRENT↓</h4>
                 <h1>{data.main.temp}°C</h1> 
           </div>
